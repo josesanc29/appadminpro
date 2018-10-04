@@ -1,0 +1,23 @@
+<h3>{{leyenda}}</h3>
+<div class="row">
+  <div class="col-6">
+      <div class="card">
+          <div class="card-body">
+              <div class="input-group">
+                  <input #txtproceso type="number" class="form-control" name="progreso" [(ngModel)]="progreso" (ngModelChange)="progesoCambia($event)" placeholder="Cantidad de barra proceso" aria-label="Cantidad de barra proceso" aria-describedby="basic-addon2" min="1" max="100">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button" (click)="sumar(5)"><i class="mdi mdi-plus"></i></button>
+                    <button class="btn btn-outline-danger" type="button"(click)="restar(5)"><i class="mdi mdi-minus"></i></button>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-6">
+      <div class="card">
+          <div class="card-body">
+              <h2>La cantidad de progreso es:....{{progreso}}</h2>
+          </div>
+      </div>
+  </div>
+</div>
